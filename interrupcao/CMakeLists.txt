@@ -44,6 +44,10 @@ pico_set_program_version(interrupcao "0.1")
 pico_enable_stdio_uart(interrupcao 0)
 pico_enable_stdio_usb(interrupcao 0)
 
+pico_generate_pio_header(interrupcao ${CMAKE_CURRENT_LIST_DIR}/interrupcao.pio OUTPUT_DIR ${CMAKE_CURRENT_LIST_DIR}/generated)
+
+target_sources(interrupcao PRIVATE interrupcao.c)
+
 # Add the standard library to the build
 target_link_libraries(interrupcao
         pico_stdlib)
@@ -55,8 +59,10 @@ target_include_directories(interrupcao PRIVATE
 
 # Add any user requested libraries
 target_link_libraries(interrupcao 
-        
+        pico_stdlib
+        hardware_pio
         )
 
 pico_add_extra_outputs(interrupcao)
+
 
