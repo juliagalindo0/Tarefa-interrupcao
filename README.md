@@ -48,3 +48,5 @@ Pressionar o botão de incremento (GPIO 5) aumenta o número exibido na matriz d
 Pressionar o botão de decremento (GPIO 6) reduz o número exibido na matriz.
 
 O código PIO (interrupcao.pio) controla os LEDs WS2812, garantindo atualizações rápidas.
+
+Link para o vídeo explicativo: [https://drive.google.com/file/d/13F3NuehiWtQnrp5IaXpvHkDSQ5CyrXlR/view?usp=sharing](https://drive.google.com/file/d/13F3NuehiWtQnrp5IaXpvHkDSQ5CyrXlR/view?usp=sharing)
